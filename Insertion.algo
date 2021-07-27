@@ -1,0 +1,18 @@
+PROCEDURE Insertion_sort(VAR tab : ARRAY_OF INTEGER)
+VAR
+    arr : ARRAY_OF INTEGER[n];
+    i,j,temp: INTEGER
+BEGIN
+    FOR i FROM 1 TO n-1 STEP 1 DO
+        temp=arr[i]
+        j=i-1
+        WHILE (j>=0) DO
+            IF (arr[j]>temp) THEN
+            arr[j+1]=arr[j]   
+            END_IF
+            
+            j=j-1
+        END_WHILE
+       arr[j]=temp 
+    END_FOR
+END
