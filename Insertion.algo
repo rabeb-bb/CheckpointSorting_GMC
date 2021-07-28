@@ -6,13 +6,10 @@ BEGIN
     FOR i FROM 1 TO n-1 STEP 1 DO
         temp=arr[i]
         j=i-1
-        WHILE (j>=0) DO
-            IF (arr[j]>temp) THEN
-            arr[j+1]=arr[j]   
-            END_IF
-            
+        WHILE (j>=0 and arr[j]>temp) DO
+            arr[j+1]=arr[j]               
             j=j-1
         END_WHILE
-       arr[j]=temp 
+       arr[j+1]=temp 
     END_FOR
 END
